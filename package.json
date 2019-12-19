@@ -1,0 +1,14 @@
+{
+  "name": "trading",
+  "version": "1.0.0",
+  "description": "Rest API for trading management platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sankaranarayanan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

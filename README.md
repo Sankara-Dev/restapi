@@ -1,2 +1,1 @@
-# restapi
-Rest Api for trade management
+# Rest API
