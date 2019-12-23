@@ -37,16 +37,23 @@ function getTradeByUser(req, res){
     const userId  = req.params.userId;
     let Trade = require('../models/trade');
 
-    Trade.findOne({_id: userId}, {sort: {'_id': 1}}, function(err, data){
+    Trade.findOne({"user._id": userId}, [], {sort: {'_id': 1}}, function(err, data){
         if(err){
             res.status(404).json({
                 message: "Not Found"
             });
         }else{
-            res.status(200).json({
-                message: "Trade fetched successfully!",
-                trade: data
-            });
+
+            if(data != null){
+                res.status(200).json({
+                    message: "Trade fetched successfully!",
+                    trade: data
+                });
+            }else{
+                res.status(200).json({
+                    message: "No records found!"
+                })
+            }
         }
     });
 }

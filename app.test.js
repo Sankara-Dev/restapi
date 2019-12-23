@@ -16,11 +16,13 @@ describe("Server!", () => {
                 done();
             });
     });
+
     it("get all trades", done => {
         chai
             .request(app)
             .get("/trades")
             .end((err, res) => {
+                expect(res).to.have.status(200);
                 expect(res.body).to.not.equal(null);
                 done();
             });
