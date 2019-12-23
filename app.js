@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const tradesRoutes = require("./routes/trades");
+const stocksRoutes = require("./routes/stocks");
 const app = express();
 var mongoose = require('mongoose');
 
@@ -30,5 +31,15 @@ app.use(function(req, res, next) {
 
 
 app.use("/trades", tradesRoutes);
+
+app.use("/stocks", stocksRoutes);
+
+app.use("/", function (req, res) {
+    res.status(200).send({
+        "status": "success",
+        "message": "Welcome To Trade API"
+    })
+});
+
 
 module.exports = app;

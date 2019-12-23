@@ -3,8 +3,7 @@ function getTrades(req, res){
     let Trade = require('../models/trade');
     Trade.find({}, [], {sort: {'_id': 1}}, function (error, trade) {
         if (error) {
-            res.status(500).send(error);
-          return;
+            res.send(error);
         }
         res.status(200).json(trade);
     });
