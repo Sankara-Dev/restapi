@@ -5,7 +5,7 @@ Class Diagram
 ![UML](UML.PNG)
 
 
-API Documentation:
+# API Documentation:
 
 Erase all trades: DELETE http://localhost:3000/trades/erase
 
@@ -34,7 +34,7 @@ GET the highest and lowest price for the stock symbol:
 GET http://localhost:3000/stocks/AAP/price?start=2019-12-23&end=2019-12-24
 
 
-Instruction to install and build
+# Instruction to install and build
 
 $ git clone https://github.com/Sankara-Dev/restapi.git
 $ cd restapi
@@ -42,7 +42,7 @@ $ npm install
 $ nodemon
 
 
-Run Test
+# Run Test
 
 $ npm run coverage
 
